@@ -5,6 +5,7 @@ MAINTAINER Onni Hakala - Geniem Oy. <onni.hakala@geniem.com>
 # Add Project files like nginx and php-fpm processes and configs
 # Also custom scripts and bashrc
 ##
+
 COPY system-root/ /
 
 # Update path with composer files + wpcs
@@ -30,7 +31,7 @@ ENV PATH="$PATH:/data/code/vendor/.bin:/root/.composer/bin:/var/lib/wpcs/vendor/
     # This is used automatically by wp-cli
     WP_CORE="/data/code/web/wp"\
     # This can be overidden by you, it's just default for us
-    TZ="Europe/Helsinki"
+    TZ="US/NYC"
 
 # Set default path to project mountpoint
 WORKDIR /data/code
